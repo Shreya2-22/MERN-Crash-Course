@@ -7,11 +7,11 @@ const productSchema = new mongoose.Schema({
     },
     price:{
         type:Number, 
-        required:True
+        required:true
     },
     image: {
         type:String,
-        required:True
+        required:true
     },
 }, {
     timestamps: true //createdAt, updatedAt
