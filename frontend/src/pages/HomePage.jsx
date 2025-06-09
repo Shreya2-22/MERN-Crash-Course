@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useProductStore } from "../store/product";
 import ProductCard from "../components/ProductCard";
+
 const HomePage = () => {
   const { fetchProducts, products } = useProductStore();
 
@@ -28,7 +29,7 @@ const HomePage = () => {
           spacing={10}
           width={"full"}
         >
-          {products.map((product) => (
+          {products.slice().reverse().map((product) => (
             <ProductCard key={product._id} product={product} />
           ))}
         </SimpleGrid>
